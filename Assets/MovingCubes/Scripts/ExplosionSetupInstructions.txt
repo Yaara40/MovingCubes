@@ -1,0 +1,51 @@
+EXPLOSION EFFECT SETUP INSTRUCTIONS:
+
+METHOD 1 - SIMPLE PARTICLE EXPLOSION:
+1. Create Empty GameObject → Name it "ExplosionPrefab"
+2. Add ParticleSystem component to it
+3. Add the SimpleExplosion script to it
+4. Drag it to your Prefabs folder to make it a prefab
+5. In each Cube prefab, drag the ExplosionPrefab to the "Explosion Prefab" field
+
+METHOD 2 - CUSTOM PARTICLE EXPLOSION:
+1. Create Empty GameObject → Add ParticleSystem
+2. Configure Particle System:
+   - Main → Start Lifetime: 1
+   - Main → Start Speed: 3-8
+   - Main → Start Size: 0.05-0.2
+   - Main → Start Color: Yellow/Orange/Red
+   - Main → Max Particles: 30-100
+   
+   - Emission → Rate over Time: 0
+   - Emission → Bursts: Add burst at time 0 with 50 particles
+   
+   - Shape → Shape: Sphere, Radius: 0.1
+   
+   - Velocity over Lifetime → Enable, Radial: 2-5
+   
+   - Color over Lifetime → Enable, fade from bright to transparent
+   
+   - Size over Lifetime → Enable, start small, grow, then shrink
+
+3. Save as prefab and assign to cubes
+
+METHOD 3 - NO PARTICLE SYSTEM (SIMPLE ANIMATION):
+- The code already includes a scale-up animation effect
+- The cube will grow 2x bigger then disappear
+- No need to assign explosion prefab - just leave it empty
+
+WHAT THE EXPLOSION DOES:
+✅ Cube stops moving during explosion
+✅ Cube scales up (grows bigger)
+✅ Particle explosion plays (if prefab assigned)
+✅ Cube becomes invisible
+✅ Explosion continues for full duration
+✅ Cube gets destroyed
+
+WRONG CLICK EFFECT:
+✅ Cube flashes red 3 times when wrong cube is clicked
+✅ No movement interruption for wrong clicks
+
+CUSTOMIZATION:
+- explosionDuration: How long the explosion lasts
+- explosionPrefab: Particle system for explosion effect

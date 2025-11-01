@@ -1,0 +1,33 @@
+UI SETUP INSTRUCTIONS FOR TIMER AND GAME OVER:
+
+1. CREATE CANVAS:
+   - Right-click in Hierarchy → UI → Canvas
+   - This creates a Canvas with EventSystem
+
+2. CREATE TIMER TEXT:
+   - Right-click on Canvas → UI → Text - TextMeshPro
+   - Name it "TimerText"
+   - Position it at the top of screen
+   - Set text to "01:00" as placeholder
+   - Make font size larger (e.g., 36)
+
+3. CREATE GAME OVER PANEL:
+   - Right-click on Canvas → UI → Panel
+   - Name it "GameOverPanel"
+   - Set it to inactive initially (uncheck the checkbox)
+   - Add child Text for "Game Over" message
+   - Add child Button for "Restart"
+
+4. CONNECT TO GAMECONTROLLER:
+   - Select GameController in hierarchy
+   - Drag TimerText to "Timer Text" field
+   - Drag GameOverPanel to "Game Over Panel" field
+
+5. SETUP RESTART BUTTON:
+   - Select the Restart button
+   - In Button component, click "+" in OnClick()
+   - Drag GameController to the object field
+   - Select "RestartGame()" from dropdown
+
+TIMER FORMAT: Shows as MM:SS (e.g., "01:00", "00:30", "00:05")
+GAME OVER: Shows when time runs out or all cubes clicked

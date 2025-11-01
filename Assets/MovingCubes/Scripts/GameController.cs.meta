@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 838e127245427430cbe1fddc15a3bef3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cubePrefab: {instanceID: 0}
+  - timerText: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - gameOverPanel: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
